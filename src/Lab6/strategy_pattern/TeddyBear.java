@@ -1,6 +1,6 @@
 package Lab6.strategy_pattern;
 
-public class StuffedAnimal extends Toy {
+public class TeddyBear extends Toy {
     @Override
     void orderParts() {
 
