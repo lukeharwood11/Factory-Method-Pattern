@@ -1,4 +1,4 @@
-package Lab6.client_code;
+package lab6.client_code;
 
 public class MenuController {
 

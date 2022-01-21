@@ -1,6 +1,6 @@
-package Lab6.strategy_pattern;
+package lab6.strategy_pattern;
 
-public class Barbie extends Toy {
+public class Ipad extends Toy {
     @Override
     void orderParts() {
 

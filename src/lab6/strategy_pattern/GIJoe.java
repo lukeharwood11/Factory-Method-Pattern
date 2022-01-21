@@ -1,6 +1,6 @@
-package Lab6.strategy_pattern;
+package lab6.strategy_pattern;
 
-public class RcCar extends Toy {
+public class GIJoe extends Toy {
     @Override
     void orderParts() {
 

@@ -1,4 +1,4 @@
-package Lab6.strategy_pattern;
+package lab6.strategy_pattern;
 
 public class StuffedAnimalDog {
 }
