@@ -1,7 +1,5 @@
 package lab6.online_database;
 
-import lab6.strategy_pattern.Toy;
-
 public class Order {
 
     private static int orderCount = 0;

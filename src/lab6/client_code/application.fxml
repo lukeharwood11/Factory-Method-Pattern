@@ -9,44 +9,56 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<FlowPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="647.0" prefWidth="1074.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lab6.client_code.Controller">
+<FlowPane columnHalignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="647.0" prefWidth="1074.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lab6.client_code.Controller">
    <children>
       <VBox prefHeight="647.0" prefWidth="1074.0">
          <children>
-            <HBox alignment="CENTER" prefHeight="70.0" prefWidth="600.0">
+            <HBox alignment="CENTER_LEFT" prefHeight="70.0" prefWidth="600.0" style="-fx-background-color: gray;">
                <children>
-                  <Button mnemonicParsing="false" prefHeight="70.0" prefWidth="70.0" text="Button" />
-                  <Button mnemonicParsing="false" prefHeight="70.0" prefWidth="70.0" text="Button" />
-                  <Button mnemonicParsing="false" prefHeight="70.0" prefWidth="70.0" text="Button" />
-                  <Button mnemonicParsing="false" prefHeight="70.0" prefWidth="70.0" text="Button" />
-                  <Button mnemonicParsing="false" prefHeight="70.0" prefWidth="70.0" text="Button" />
-                  <Button mnemonicParsing="false" prefHeight="70.0" prefWidth="70.0" text="Button" />
-                  <Button mnemonicParsing="false" prefHeight="70.0" prefWidth="70.0" text="Button" />
-                  <Button mnemonicParsing="false" prefHeight="70.0" prefWidth="70.0" text="Button" />
+                  <Button fx:id="barbie" mnemonicParsing="false" onAction="#createToy" prefHeight="70.0" prefWidth="70.0" style="-fx-background-color: white; -fx-border-color: black;" text="Barbie" />
+                  <Button fx:id="rcCar" mnemonicParsing="false" onAction="#createToy" prefHeight="70.0" prefWidth="70.0" style="-fx-background-color: white; -fx-border-color: black;" text="RC Car" />
+                  <Button fx:id="iPad" mnemonicParsing="false" onAction="#createToy" prefHeight="70.0" prefWidth="70.0" style="-fx-background-color: white; -fx-border-color: black;" text="IPad" />
+                  <Button fx:id="clearOrdersButton" cancelButton="true" mnemonicParsing="false" onAction="#clearOrders" prefHeight="70.0" prefWidth="70.0" style="-fx-background-color: red;" text="Clear Orders" textAlignment="CENTER" wrapText="true" />
                </children>
             </HBox>
-            <HBox alignment="CENTER" prefHeight="72.0" prefWidth="600.0">
+            <HBox alignment="CENTER_LEFT" prefHeight="72.0" prefWidth="600.0" style="-fx-background-color: black;">
                <children>
-                  <Button mnemonicParsing="false" prefHeight="70.0" prefWidth="70.0" text="Button" />
-                  <Button mnemonicParsing="false" prefHeight="70.0" prefWidth="70.0" text="Button" />
-                  <Button mnemonicParsing="false" prefHeight="70.0" prefWidth="70.0" text="Button" />
-                  <Button mnemonicParsing="false" prefHeight="70.0" prefWidth="70.0" text="Button" />
-                  <Button mnemonicParsing="false" prefHeight="70.0" prefWidth="70.0" text="Button" />
-                  <Button mnemonicParsing="false" prefHeight="70.0" prefWidth="70.0" text="Button" />
-                  <Button mnemonicParsing="false" prefHeight="70.0" prefWidth="70.0" text="Button" />
-                  <Button alignment="CENTER" mnemonicParsing="false" prefHeight="70.0" prefWidth="70.0" text="Button" />
+                  <Button fx:id="giJoe" mnemonicParsing="false" onAction="#createToy" prefHeight="70.0" prefWidth="70.0" style="-fx-background-color: white; -fx-border-color: black;" text="GI Joe" />
+                  <Button fx:id="teddyBear" mnemonicParsing="false" onAction="#createToy" prefHeight="70.0" prefWidth="70.0" style="-fx-background-color: white; -fx-border-color: black;" text="Teddy Bear" textAlignment="CENTER" wrapText="true" />
+                  <Button fx:id="matchBoxCar" mnemonicParsing="false" onAction="#createToy" prefHeight="70.0" prefWidth="70.0" style="-fx-background-color: white; -fx-border-color: black;" text="Match Box Car" textAlignment="CENTER" wrapText="true" />
+                  <Button fx:id="stuffedAnimalDog" mnemonicParsing="false" onAction="#createToy" prefHeight="70.0" prefWidth="70.0" style="-fx-background-color: white; -fx-border-color: black;" text="Stuffed Animal Dog" textAlignment="CENTER" wrapText="true" />
                </children>
             </HBox>
             <Pane prefHeight="508.0" prefWidth="1074.0">
                <children>
-                  <ScrollPane layoutX="5.0" layoutY="37.0" prefHeight="466.0" prefWidth="328.0">
+                  <ScrollPane layoutX="5.0" layoutY="97.0" prefHeight="406.0" prefWidth="328.0">
                     <content>
-                        <VBox fx:id="orderQueue" prefHeight="461.0" prefWidth="323.0" />
+                        <VBox fx:id="orderQueue" prefHeight="385.0" prefWidth="323.0" />
                     </content>
                   </ScrollPane>
-                  <Label layoutX="4.0" layoutY="-39.0" prefHeight="78.0" prefWidth="310.0" text="Orders">
+                  <Label layoutX="13.0" layoutY="14.0" prefHeight="78.0" prefWidth="310.0" text="Orders">
                      <font>
-                        <Font name="Bodoni MT" size="64.0" />
+                        <Font name="Bernard MT Condensed" size="64.0" />
+                     </font>
+                  </Label>
+                  <ScrollPane layoutX="342.0" layoutY="99.0" prefHeight="399.0" prefWidth="329.0">
+                     <content>
+                        <VBox fx:id="factoryQueue" prefHeight="383.0" prefWidth="314.0" />
+                     </content>
+                  </ScrollPane>
+                  <ScrollPane layoutX="680.0" layoutY="98.0" prefHeight="399.0" prefWidth="317.0">
+                     <content>
+                        <VBox fx:id="assemblyQueue" prefHeight="395.0" prefWidth="311.0" />
+                     </content>
+                  </ScrollPane>
+                  <Label layoutX="332.0" layoutY="14.0" prefHeight="78.0" prefWidth="310.0" text="Factory">
+                     <font>
+                        <Font name="Bernard MT Condensed" size="64.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="686.0" layoutY="13.0" prefHeight="78.0" prefWidth="310.0" text="Assembly">
+                     <font>
+                        <Font name="Bernard MT Condensed" size="64.0" />
                      </font>
                   </Label>
                </children>
